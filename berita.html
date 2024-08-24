@@ -112,24 +112,24 @@
     </div>
     <header>
     <div class="content position-relative">
-        <img class="img-cover w-100" src="image/thumbnail-wisuda.png" alt="">
+        <img class="img-cover" src="image/thumbnail-wisuda.png" alt="">
         <div class="backdrop"></div>
         <div class="content-body">
             <div class="content-text">
                 <span class="badge rounded-pill text-bg-secondary py-2 px-3">Wisuda</span>
                 <h1 class="text-white">Transformasi Digital UNIRA MALANG</h1>
-                <div class="row gap-0 mb-3">
+                <div class="row gap-0 mb-3 d-none d-md-flex">
                     <div class="col-6 mb-2 col-md-3">
-                        <a href="#" class="btn w-100 btn-sm px-5 text-white" style="background: #0f3c94;"><i class="fa-brands fa-facebook-f me-2"></i> Share</a>
+                        <a href="#" class="btn w-100 btn-sm w-100 text-white" style="background: #0f3c94;"><i class="fa-brands fa-facebook-f me-2"></i> Share</a>
                     </div>
                     <div class="col-6 mb-2 col-md-3">
-                        <a href="#" class="btn w-100 btn-sm px-5 text-white" style="background: #14171A;"><i class="fa-brands fa-x-twitter me-2"></i> Tweet</a>
+                        <a href="#" class="btn w-100 btn-sm w-100 text-white" style="background: #14171A;"><i class="fa-brands fa-x-twitter me-2"></i> Tweet</a>
                     </div>
                     <div class="col-6 mb-2 col-md-3">
-                        <a href="#" class="btn w-100 btn-sm px-5 text-white" style="background: #E1306C;"><i class="fa-brands fa-instagram me2"></i> Share</a>
+                        <a href="#" class="btn w-100 btn-sm w-100 text-white" style="background: #E1306C;"><i class="fa-brands fa-instagram me2"></i> Share</a>
                     </div>
                     <div class="col-6 mb-2 col-md-3">
-                        <a href="#" class="btn w-100 btn-sm px-5 text-white" style="background: #25D366;"><i class="fa-brands fa-whatsapp me-2"></i> Share</a>
+                        <a href="#" class="btn w-100 btn-sm w-100 text-white" style="background: #25D366;"><i class="fa-brands fa-whatsapp me-2"></i> Share</a>
                     </div>
                 </div>
                 <span class="text-white">Senin &#x2022; 17 Agustus 2024</span>
@@ -166,25 +166,33 @@
 
     </section>
 
+    <div class="share-mobile">
+        <div class="content">
+            <a href="#" class="text-white" style="background: #0f3c94;"> Share <span class="icon"><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a href="#" class="text-white" style="background: #14171A;"> Tweet <span class="icon"><i class="fa-brands fa-x-twitter"></i></span></a>
+            <a href="#" class="text-white" style="background: #E1306C;"> Share <span class="icon"><i class="fa-brands fa-instagram"></i></span></a>
+            <a href="#" class="text-white" style="background: #25D366;"> Share <span class="icon"><i class="fa-brands fa-whatsapp"></i></span></a>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
-        var content = $('header .content .backdrop');
-        var image = $('header .content .img-cover');
-        var imageWidth = $(image).height()
+        // var content = $('header .content .backdrop');
+        // var image = $('header .content .img-cover');
+        // var imageWidth = $(image).height()
 
-        content.css({
-            height:imageWidth+"px"
-        })
-        $(window).on('resize', function() {
-            var content = $('header .content .backdrop');
-            var image = $('header .content .img-cover');
-            var imageWidth = $(image).height()
+        // content.css({
+        //     height:imageWidth+"px"
+        // })
+        // $(window).on('resize', function() {
+        //     var content = $('header .content .backdrop');
+        //     var image = $('header .content .img-cover');
+        //     var imageWidth = $(image).height()
 
-            content.css({
-                height:imageWidth+"px"
-            })
+        //     content.css({
+        //         height:imageWidth+"px"
+        //     })
             
-        });
+        // });
     </script>

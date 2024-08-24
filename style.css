@@ -46,6 +46,12 @@
 .btn {
     padding: .75rem 1rem;
     font-weight: 600;
+    letter-spacing: 1px;
+    transition: letter-spacing .5s;
+}
+.btn:hover{
+    letter-spacing: 3px;
+    transition: letter-spacing .5s;
 }
 .text-bg-secondary{
     background: var(--secondary) !important;
@@ -57,10 +63,25 @@ body{
 .information-akademic .item-tools{
     text-align: center;
     margin-bottom: 2rem;
+    padding: 1rem 0;
     opacity: 0;
+    background-color: white;
+    transition: background-color .3s;
+}
+.information-akademic .item-tools:hover{
+    background-color: var(--green-shoft);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .3s;
 }
 .information-akademic .item-tools .icon{
     margin-bottom: .5rem;
+    scale: 1;
+    transition: scale .5s;
+}
+.information-akademic .item-tools:hover .icon{
+    scale: .9;
+    transition: scale .5s;
 }
 .information-akademic .item-tools .label{
     font-weight: 600;
@@ -75,8 +96,17 @@ body{
     overflow: hidden;
     /* margin-bottom: 1.5rem; */
 }
+.item-news:hover{
+    cursor: pointer;
+}
+.item-news:hover .thumbnail img{
+    scale: 1.2;
+    transition: scale .5s;
+}
 .item-news .thumbnail img{
     width: 100%;
+    scale: 1;
+    transition: scale .5s;
 }
 .item-news .content{
     padding: 1rem;
@@ -161,6 +191,9 @@ body{
     box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
 
 }
+footer .list-group-item,footer .info{
+    font-size: 10pt;
+}
 
 /* CUSTOM DROPDOWN */
 .__dropdown:hover{
@@ -170,7 +203,9 @@ body{
     display: flex;
     align-items: center;
     font-weight: 500;
-
+}
+.__dropdown .__dropdown-head:hover{
+    color: var(--secondary-600);
 }
 .__dropdown .__dropdown-head::after{
     content: "";
@@ -181,6 +216,14 @@ body{
     border-right: 2px solid white;
     border-bottom: 2px solid white;
     transform: rotate(45deg);
+    transition: transform .5s;
+}
+.__dropdown .__dropdown-head:hover::after{
+    border-right: 2px solid var(--secondary-600);
+    border-bottom: 2px solid var(--secondary-600);
+    transform: rotate(-135deg);
+    transition: transform .5s;
+
 }
 .__dropdown .__dropdown-body{
     position: absolute;
@@ -213,6 +256,8 @@ body{
     color: white;
     font-weight: 500;
     font-size: 14px;
+}.navbar-nav .nav-link:hover{
+    color: var(--secondary-600);
 }
 .navbar-nav .nav-link.active{
     color: var(--secondary);
@@ -261,7 +306,7 @@ body{
 }
 header{
     position: relative;
-    height: 75vh;
+    /* height: 75vh; */
     overflow: hidden;
 }
 header .content{
@@ -322,6 +367,10 @@ header .content img{
 .scroll{
     animation: bounce 2s infinite;
 }
+.share-mobile{
+    display: none;
+}
+
 @keyframes wheel {
 	to {
 		opacity: 0;
@@ -392,6 +441,14 @@ header .content img{
         content: attr(data-count);
     }
 }
+@keyframes showSosmedShare {
+    from {
+        right: 0px;
+    }
+    to {
+        right: -68px;
+    }
+}
 /* 
 .statistic .section-body{
     background-image: url(image/bg-statistic.png);
@@ -400,7 +457,7 @@ header .content img{
 /*`sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 767px) {
     header .content{
-        padding: 1rem 2rem;
+        padding: 3rem 2rem;
     }
     header .content img{
         width: auto;
@@ -420,6 +477,40 @@ header .content img{
     .scroll{
         display: none;
     }
+    .img-cover{
+        width: auto;
+    }
+    .share-mobile{
+        position: fixed;
+        top: 50%;
+        /* bottom: 0;    */
+        display: block;
+        z-index: 15;
+        border-radius: 0 8px 8px 0;
+        margin-left:-68px;
+    }
+    .share-mobile a:first-child{
+        border-radius: 0 8px 0px 0;
+    }
+    .share-mobile a:last-child{
+        border-radius: 0 0px 8px 0;
+    }
+    .share-mobile a{
+        padding: 1rem 0rem 1rem 1rem;
+        text-decoration: none;
+        box-sizing: border-box;
+        display: block;
+    }
+    .share-mobile a:hover{
+        position: relative;
+        animation: showSosmedShare .3s forwards;
+
+    }
+    .share-mobile a .icon{
+        width: 50px;
+        text-align: center;
+        display: inline-table;
+    }
 }
 
 /*`md` applies to small devices (landscape phones, less than 768px) */
@@ -427,8 +518,8 @@ header .content img{
     .statistic .section-body{
         background-image: url(image/bg-statistic.png);
     }
-    header .content img{
-        width: auto;
+    .img-cover{
+        width: 100%;
     }
 
 }
