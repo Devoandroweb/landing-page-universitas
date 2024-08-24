@@ -60,6 +60,10 @@
 body{
     font-family: "Inter", sans-serif;
 }
+.header-top svg{
+    width: 50px;
+    height: 50px;
+}
 .information-akademic .item-tools{
     text-align: center;
     margin-bottom: 2rem;
