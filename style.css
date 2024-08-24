@@ -203,7 +203,7 @@ footer .list-group-item,footer .info{
     font-size: 10pt;
 }
 .marquee-container {
-    max-width: 130px; /* Atur lebar container sesuai kebutuhan */
+    min-width: 130px; /* Atur lebar container sesuai kebutuhan */
     overflow: hidden;
     white-space: nowrap; /* Hindari teks wrapping */
     box-sizing: border-box;
