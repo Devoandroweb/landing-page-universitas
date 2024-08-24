@@ -98,6 +98,7 @@ body{
     position: relative;
     border-radius: 8px;
     overflow: hidden;
+    
     /* margin-bottom: 1.5rem; */
 }
 .item-news:hover{
@@ -135,6 +136,7 @@ body{
     position: absolute;
     bottom: 0;
     color: white;
+    width: 90%;
 }
 .item-news h3{
     overflow: hidden;
