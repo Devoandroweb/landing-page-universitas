@@ -3,8 +3,8 @@
     --primary-50:#E7ECEC;
     --primary-200:#91A8A8;
     --primary-600:#0E3B3C;
-    --secondary:#D96124;
-    --secondary-600:#C55821;
+    --secondary:#D3A831;
+    --secondary-600:#bd8d09;
     --danger:#FF3B30;
     --grey-200:#F6F6F6;
     --green-shoft:#EFF3F3;
@@ -17,7 +17,7 @@
     background: var(--primary-200) !important;
 }
 .bg-secondary{
-    background: #D96124 !important;
+    background: var(--secondary) !important;
 }
 .bg-green-soft{
     background: var(--green-shoft);
