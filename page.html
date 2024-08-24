@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css">
-    
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.dataTables.min.css">
+
     <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.default.min.css">
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="accordion.css">
 </head>
   <body>
     <div class="container-fluid header-top px-2 py-1 px-md-5 py-md-2 bg-secondary">
@@ -116,8 +117,8 @@
         <div class="backdrop"></div>
         <div class="content-body">
             <div class="content-text">
-                <span class="badge rounded-pill text-bg-secondary py-2 px-3">Informasi</span>
-                <h1 class="text-white">BERITA TERBARU</h1>
+                <span class="badge rounded-pill text-bg-secondary py-2 px-3">Kategori</span>
+                <h1 class="text-white">JUDUL HALAMAN</h1>
             </div>
         </div>
         <div class="scroll text-center text-white position-absolute" style="right: 1rem;top:40%; width:60px; z-index:13;">
@@ -127,110 +128,96 @@
     </div>
     </header>
     <section>
-        <div class="container-fluid news-newed p-5">
+        <div class="container-fluid news-newed p-3 p-md-5">
             <div class="row">
                 <div class="col-12 col-md-9 mb-5" style="text-align: justify;">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="item-news" onclick="window.location.assign('berita-detail.html')">
-                                <div class="thumbnail">
-                                    <img class="img-fluid" src="image/thumbnail-pertemuan.png" alt="">
-                                </div>
-                                <div class="content bg-gradient-primary">
-                                    <div class="category">
-                                        Pertemuan
+                    <iframe class="mb-3 rounded-2 vidio" width="100%"
+                            src="https://www.youtube.com/embed/LhweFdoJD3g" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="text-center mb-3">
+                        <img src="image/thumbnail-pertemuan.png" class="img-fluid w-100 w-md-75 rounded-2" alt="">
+                    </div>
+                    <!-- DESCRIPTION -->
+                    <div class="description text-justify">
+                        <p>
+                            What is Lorem Ipsum?
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                        <p>
+                            Where does it come from?
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>
+                    </div>
+                    <!-- TABEL -->
+                     <div class="card mb-3">
+                        <div class="card-body">
+                            <table id="table" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th width="3%" class="text-center">NO</th>
+                                        <th>NAMA</th>
+                                        <th>LN/DN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>Lunghwa University of Science and Technology, Taiwan</td>
+                                        <td>LN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>WOOSUK UNIVERSITY</td>
+                                        <td>LN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>Universitas Maarif Hasyim Latif (Umaha) Sidoarjo</td>
+                                        <td>LN</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                     </div>
+                     <!-- list link -->
+                    <div class="card card-body mb-3 item-download-document">
+                        <div class="row">
+                            <div class="col-12 col-md-8 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <div class="icon p-2 me-2">
+                                        <i class="fa-regular fa-file" style="font-size: 35pt;"></i>
                                     </div>
-                                    <div class="content-cover">
-                                        <div class="date d-flex align-items-center">
-                                            <img class="me-1" style="width: auto;" src="image/calendar.png" alt="">
-                                            01 Agustus 2024
+                                    <div class="description">
+                                        <div class="fw-bold">
+                                            Kalender Akademik PDF
                                         </div>
-                                        <h3 class="text-uppercase fw-bold">
-                                            Transformasi Digital UNIRA MALANG
-                                        </h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet consectetur. Gravida eu id ligula a rhoncus eu id. Vitae nulla dolor nibh leo mauris tellus arcu eleifend vitae.
-                                        </p>
+                                         <span class="small">Size &#x2022; 1,5 MB</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="item-news">
-                                <div class="thumbnail">
-                                    <img class="img-fluid" src="image/thumbnail-pertemuan.png" alt="">
-                                </div>
-                                <div class="content bg-gradient-primary">
-                                    <div class="category">
-                                        Pertemuan
-                                    </div>
-                                    <div class="content-cover">
-                                        <div class="date d-flex align-items-center">
-                                            <img class="me-1" style="width: auto;" src="image/calendar.png" alt="">
-                                            01 Agustus 2024
-                                        </div>
-                                        <h3 class="text-uppercase fw-bold">
-                                            Transformasi Digital UNIRA MALANG
-                                        </h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet consectetur. Gravida eu id ligula a rhoncus eu id. Vitae nulla dolor nibh leo mauris tellus arcu eleifend vitae.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="item-news">
-                                <div class="thumbnail">
-                                    <img class="img-fluid" src="image/thumbnail-pertemuan.png" alt="">
-                                </div>
-                                <div class="content bg-gradient-primary">
-                                    <div class="category">
-                                        Pertemuan
-                                    </div>
-                                    <div class="content-cover">
-                                        <div class="date d-flex align-items-center">
-                                            <img class="me-1" style="width: auto;" src="image/calendar.png" alt="">
-                                            01 Agustus 2024
-                                        </div>
-                                        <h3 class="text-uppercase fw-bold">
-                                            Transformasi Digital UNIRA MALANG
-                                        </h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet consectetur. Gravida eu id ligula a rhoncus eu id. Vitae nulla dolor nibh leo mauris tellus arcu eleifend vitae.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 mb-4">
-                            <div class="item-news">
-                                <div class="thumbnail">
-                                    <img class="img-fluid" src="image/thumbnail-pertemuan.png" alt="">
-                                </div>
-                                <div class="content bg-gradient-primary">
-                                    <div class="category">
-                                        Pertemuan
-                                    </div>
-                                    <div class="content-cover">
-                                        <div class="date d-flex align-items-center">
-                                            <img class="me-1" style="width: auto;" src="image/calendar.png" alt="">
-                                            01 Agustus 2024
-                                        </div>
-                                        <h3 class="text-uppercase fw-bold">
-                                            Transformasi Digital UNIRA MALANG
-                                        </h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet consectetur. Gravida eu id ligula a rhoncus eu id. Vitae nulla dolor nibh leo mauris tellus arcu eleifend vitae.
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="col-12 col-md-4 d-flex align-items-center">
+                                <a href="#" class="btn btn-sm ms-2 btn-download btn-danger">
+                                    <div>Lihat</div>
+                                    <div><i class="fa-solid fa-eye"></i></div>
+                                </a>
+                                <a href="#" class="btn btn-sm ms-2 btn-download btn-primary">
+                                    <div>Download</div>
+                                    <div><i class="fa-solid fa-arrow-down"></i></div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
-                    <div class="new-popular">
+                    <div class="new-popular sticky-md-top" style="top: 1rem;">
                         <div class="header bg-secondary p-3 pb-2 mb-3 rounded-top">
                             <h2 class="fw-bold">#Terpopuler</h2>
                         </div>
@@ -309,7 +296,7 @@
                 </div>
             </div>
         </div>
-
+        
     </section>
     <footer>
         <div class="container-fluid bg-primary py-5 px-5 bg-green-soft" style="box-shadow: 0px 11px 38px -22px #080808b5 inset;">
@@ -383,3 +370,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.1.4/js/dataTables.min.js"></script>    
+    <script>
+        $("#table").DataTable();
+        
+    </script>
+    
+</body>
+</html>
