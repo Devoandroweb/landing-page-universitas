@@ -203,7 +203,6 @@ footer .list-group-item,footer .info{
     font-size: 10pt;
 }
 .marquee-container {
-    min-width: 130px; /* Atur lebar container sesuai kebutuhan */
     overflow: hidden;
     white-space: nowrap; /* Hindari teks wrapping */
     box-sizing: border-box;
@@ -211,8 +210,18 @@ footer .list-group-item,footer .info{
 
 .marquee {
     display: inline-block;
-    padding-left: 100%; /* Start outside of the view */
-    animation: marquee 10s linear infinite;
+    /* animation: marquee 10s linear infinite; */
+}
+.dosen .sosmed{
+    top: -130%;
+    border-radius: 2rem 0 0 0;
+    right: 0rem;
+    background: #fff;
+    padding: .5rem 1rem;
+}
+.dosen .sosmed a{
+    /* outline: .4rem solid #fff; */
+    z-index: 2;
 }
 
 @keyframes marquee {
